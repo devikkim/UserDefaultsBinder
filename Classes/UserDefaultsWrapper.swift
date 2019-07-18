@@ -1,11 +1,10 @@
 //
-//  InnerDatabase.swift
-//  GME Remit
+//  UserDefaultsWrapper.swift
+//  UserDefaultsBinder
 //
-//  Created by InKwon James Kim on 17/07/2019.
-//  Copyright © 2019 Gobal Money Express Co. Ltd. All rights reserved.
+//  Created by InKwon James Kim on 18/07/2019.
+//  Copyright © 2019 InKwon Devik Kim. All rights reserved.
 //
-
 
 protocol KeyProtocol: RawRepresentable, CaseIterable {}
 
@@ -79,7 +78,7 @@ extension UserDefaultsWrapper {
   }
 }
 
-extension UserDefaultsWrapper {  
+extension UserDefaultsWrapper {
   @discardableResult
   func remove(_ key: Keys) -> Self {
     UserDefaults.standard.removeObject(forKey: key.rawValue)
